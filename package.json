@@ -1,0 +1,63 @@
+{
+  "name": "ruyiweb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib:h5-swiper": "vue-cli-service build --target lib --name page-engine --dest ./server/engine_libs/h5-swiper ./src/engine-template/engine-h5-swiper/index.js"
+  },
+  "dependencies": {
+    "animate.css": "3.7.2",
+    "axios": "^1.6.2",
+    "core-js": "^3.8.3",
+    "dayjs": "^1.11.10",
+    "element-ui": "^2.15.14",
+    "http-proxy-middleware": "^3.0.0",
+    "jsencrypt": "^3.3.2",
+    "less": "^4.2.0",
+    "less-loader": "^11.1.3",
+    "lodash": "^4.17.21",
+    "nprogress": "^0.2.0",
+    "qrcode.vue": "^3.4.1",
+    "qrcodejs2": "^0.0.2",
+    "vue": "^2.6.14",
+    "vue-clipboard2": "^0.3.3",
+    "vue-cropper": "^0.6.4",
+    "vue-lottie": "^0.2.1",
+    "vue-router": "^3.4.0",
+    "vue-swiper-component": "^2.1.3",
+    "vuex": "3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
