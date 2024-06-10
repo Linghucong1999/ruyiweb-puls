@@ -15,7 +15,7 @@ module.exports = defineConfig({
     },
     hot: true,
   },
-  assetsDir: './static/',
+  assetsDir: 'static',
   pages: {
     index: {
       entry: 'src/main.js',
@@ -33,6 +33,10 @@ module.exports = defineConfig({
   chainWebpack: config => {
     config.resolve.alias
       .set('@', path.resolve(__dirname, './src'));
+    config.resolve.extensions.add('.js');
+    config.resolve.modules
+      .add(path.resolve(__dirname, 'src'))
+      .add('node_modules');
     config.module.rule('js')
       .include.add(path.resolve(__dirname, './src/engine-template')).end()
       .include.add(path.resolve(__dirname, './src/common')).end()
@@ -41,5 +45,24 @@ module.exports = defineConfig({
       .tap(options => {
         return options;
       });
+
+    config.optimization.splitChunks({
+      chunks: 'all',
+      cacheGroups: {
+        vendors: {
+          name: 'chunk-vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          chunks: 'initial',
+        },
+        common: {
+          name: 'chunk-common',
+          minChunks: 2,
+          priority: -20,
+          chunks: 'initial',
+          reuseExistingChunks: true,
+        }
+      }
+    });
   }
 });
