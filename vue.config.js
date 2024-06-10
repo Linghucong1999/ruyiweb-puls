@@ -60,7 +60,7 @@ module.exports = defineConfig({
           minChunks: 2,
           priority: -20,
           chunks: 'initial',
-          reuseExistingChunks: true,
+          reuseExistingChunk: true,
         }
       }
     });
