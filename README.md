@@ -3,10 +3,8 @@
 
 🌈 🌈 后端地址：https://github.com/Linghucong1999/ruyiserver.git
 
-🌈 🌈 网站：https://ruyiweb.vercel.app/
+🌈 🌈 网站：https://linghuruyi.cn
 
 🍓 🍓 后端部署可使用宝塔快速部署
 
 🍓 🍓 阿里云学生认证有免费三个月的试用云服务器，自己申请就行，玩玩部署，很简单的。没有上线项目找工作很难（除985，211）。
-
-🍓 🍓 如果有实力，去新加坡，但是他们会先保障本地人的就业问题再考虑外国人，薪资待遇很ok，不卷。
